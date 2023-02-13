@@ -37,7 +37,7 @@ resource "azurerm_role_assignment" "acrpush" {
   skip_service_principal_aad_check       = lookup(each.value, "skip_service_principal_aad_check", null)
 }
 
-resource "azurerm_role_assignment" "reader_acr_rg" {  
+resource "azurerm_role_assignment" "reader_acr_rg" {
   for_each = {
     for k, v in var.role_assignment : k => v
     if var.reader_permission_on_rg
@@ -53,7 +53,7 @@ resource "azurerm_role_assignment" "reader_acr_rg" {
   skip_service_principal_aad_check       = lookup(each.value, "skip_service_principal_aad_check", null)
 }
 
-resource "azurerm_role_assignment" "reader_acr" {  
+resource "azurerm_role_assignment" "reader_acr" {
   for_each = {
     for k, v in var.role_assignment : k => v
     if var.reader_permission_on_acr

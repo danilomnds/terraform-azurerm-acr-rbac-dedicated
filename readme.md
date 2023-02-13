@@ -27,7 +27,7 @@ By defining the `?ref=***` in the the URL, you can define the version of the mod
 
 ```hcl
 module "rbac_groups_acr" {
-  source = "git::https://https://github.com/danilomnds/terraform-azurerm-acr-rbac-dedicated?ref=v1.1.0"
+  source = "git::https://https://github.com/danilomnds/terraform-azurerm-acr-rbac-dedicated?ref=v1.0.0"
   scope = <acr id>
   role_assignment = {
     <group name> = {
@@ -49,7 +49,7 @@ module "rbac_groups_acr" {
 | reader_permission_on_rg | enable or disable the reader permission on rg scope | `bool` | `false` | No |
 | reader_permission_on_acr | enable or disable the reader permission on acr scope | `bool` | `false` | No |
 
-## List of parameters for that can be defined in each assignment
+## List of parameters that can be defined in each assignment
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
@@ -62,5 +62,5 @@ module "rbac_groups_acr" {
 | skip_service_principal_aad_check | skip the Azure AD account verification | `bool` | `false` | No |
 
 ## Documentation
-Terraform Role Assigment: <br>
+Terraform Role Assignment: <br>
 [https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/role_assignment](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/role_assignment)<br>

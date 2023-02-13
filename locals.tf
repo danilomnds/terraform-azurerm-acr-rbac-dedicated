@@ -1,3 +1,3 @@
-locals {  
-  rg = join("/",slice(split("/",var.scope),1,5))
+locals {
+  rg = join("/", slice(split("/", var.scope), 1, 5))
 }
